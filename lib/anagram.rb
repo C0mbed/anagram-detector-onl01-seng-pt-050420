@@ -7,9 +7,10 @@ class Anagram
   end
 
   def match(match_array)
-    word_sorted = @word.sort
+    word_sorted = @word.split("")
     match_array.each do |entry|
-      if word_sorted == entry.sort
+      entry_sorted = entry.split("")
+      if word_sorted.sort == entry_sorted.sort
         return @word
       end
     end
