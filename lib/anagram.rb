@@ -11,7 +11,7 @@ class Anagram
     match_array.each do |entry|
       entry_sorted = entry.split("")
       if word_sorted.sort == entry_sorted.sort
-        @match_array << @word
+        @match_array << entry
       end
     end
     return @match_array
